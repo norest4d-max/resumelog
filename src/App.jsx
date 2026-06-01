@@ -8,6 +8,7 @@ const profile = {
   linkedin: 'https://www.linkedin.com/in/rafael-sandoval-053a07241/',
   linkedinLabel: 'rafael-sandoval',
   liveProject: 'https://sudoku-115-kjhfipmfm-rafael-morenos-projects.vercel.app/',
+  horrorQuizRepo: 'https://github.com/norest4d-max/HorrorMovieThemedQuizes',
 };
 
 const stack = ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Python', 'GitHub', 'PWA', 'Vercel', 'Game UI'];
@@ -32,6 +33,14 @@ const projects = [
     ],
   },
   {
+    title: 'Horror Movie Themed Quizzes',
+    label: 'React Quiz Game',
+    description: 'Minimalist black-paper-white horror arcade quiz app with Chucky, Halloween, Scream, Midsommar, and Five Nights at Freddy\'s question banks, 4-choice answers, score tracking, wrong-answer limit, ding/ehh feedback sounds, a ticking timer, and adaptive repeat logic for missed questions.',
+    links: [
+      { label: 'GitHub Repository', href: profile.horrorQuizRepo },
+    ],
+  },
+  {
     title: 'Warehouse Map Trainer PWA',
     label: 'PWA / Quiz Tool',
     description: 'Interactive study app designed to memorize warehouse zones, item locations, equipment safety logic, and test-style questions with repeat practice.',
@@ -50,7 +59,7 @@ const experienceDisclosure = [
     field: 'Frontend, full-stack basics, project deployment, and UI systems',
     bullets: [
       'Building hands-on web projects with HTML, CSS, JavaScript, React, Next.js, Python, GitHub, and Vercel.',
-      'Focused on interactive tools, puzzle apps, flashcards, quiz logic, responsive layouts, and practical data organization.',
+      'Focused on interactive tools, puzzle apps, flashcards, quiz logic, responsive layouts, adaptive practice systems, and practical data organization.',
     ],
   },
   {
@@ -81,6 +90,7 @@ function Header() {
         <div><a className="link" href={`mailto:${profile.email}`}>{profile.email}</a></div>
         <div><ContactLink href={profile.github}>GitHub: {profile.githubLabel}</ContactLink></div>
         <div><ContactLink href={profile.liveProject}>Live Project: Sudoku 115</ContactLink></div>
+        <div><ContactLink href={profile.horrorQuizRepo}>Project: Horror Quiz Arcade</ContactLink></div>
         <div><ContactLink href={profile.linkedin}>LinkedIn: {profile.linkedinLabel}</ContactLink></div>
       </address>
     </header>
@@ -123,7 +133,7 @@ export default function App() {
     <main className="page">
       <div className="resume-shell">
         <Header />
-        <p className="summary">Full-stack developer building clean, interactive web apps with a paper-and-ink visual style, old-video-game influence, and practical utility. Creator of Sudoku 115, a minimalist black-and-white puzzle table built for memory, trivia, math, quotes, mistakes, replay, and focused problem-solving. Experienced with HTML, CSS, JavaScript, React, Next.js, Python, GitHub, and PWA-style interfaces.</p>
+        <p className="summary">Full-stack developer building clean, interactive web apps with a paper-and-ink visual style, old-video-game influence, and practical utility. Creator of Sudoku 115 and Horror Movie Themed Quizzes, minimalist black-and-white apps built for memory, trivia, mistakes, replay, scoring, adaptive practice, and focused problem-solving. Experienced with HTML, CSS, JavaScript, React, Next.js, Python, GitHub, and PWA-style interfaces.</p>
         <div className="grid">
           <aside>
             <Section title="Core Stack"><div className="tag-list">{stack.map((item) => <span className="tag" key={item}>{item}</span>)}</div></Section>
@@ -135,7 +145,7 @@ export default function App() {
             <Section title="Experience Disclosure">{experienceDisclosure.map((item) => <ExperienceDisclosureItem key={item.title} item={item} />)}</Section>
           </div>
         </div>
-        <footer>Filed under: Developer / Interfaces / Puzzles / Utility</footer>
+        <footer>Filed under: Developer / Interfaces / Puzzles / Quizzes / Utility</footer>
       </div>
     </main>
   );
