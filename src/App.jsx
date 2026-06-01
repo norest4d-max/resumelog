@@ -8,6 +8,7 @@ const profile = {
   linkedin: 'https://www.linkedin.com/in/rafael-sandoval-053a07241/',
   linkedinLabel: 'rafael-sandoval',
   liveProject: 'https://sudoku-115-kjhfipmfm-rafael-morenos-projects.vercel.app/',
+  horrorQuizLive: 'https://horror-movie-themed-quizes.vercel.app/',
   horrorQuizRepo: 'https://github.com/norest4d-max/HorrorMovieThemedQuizes',
 };
 
@@ -37,6 +38,7 @@ const projects = [
     label: 'React Quiz Game',
     description: 'Minimalist black-paper-white horror arcade quiz app with Chucky, Halloween, Scream, Midsommar, and Five Nights at Freddy\'s question banks, 4-choice answers, score tracking, wrong-answer limit, ding/ehh feedback sounds, a ticking timer, and adaptive repeat logic for missed questions.',
     links: [
+      { label: 'Live Site', href: profile.horrorQuizLive },
       { label: 'GitHub Repository', href: profile.horrorQuizRepo },
     ],
   },
@@ -90,7 +92,7 @@ function Header() {
         <div><a className="link" href={`mailto:${profile.email}`}>{profile.email}</a></div>
         <div><ContactLink href={profile.github}>GitHub: {profile.githubLabel}</ContactLink></div>
         <div><ContactLink href={profile.liveProject}>Live Project: Sudoku 115</ContactLink></div>
-        <div><ContactLink href={profile.horrorQuizRepo}>Project: Horror Quiz Arcade</ContactLink></div>
+        <div><ContactLink href={profile.horrorQuizLive}>Live Project: Horror Quiz Arcade</ContactLink></div>
         <div><ContactLink href={profile.linkedin}>LinkedIn: {profile.linkedinLabel}</ContactLink></div>
       </address>
     </header>
